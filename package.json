@@ -1,7 +1,7 @@
 {
   "name": "twitter-geo-server-js",
   "version": "1.0.0",
-  "description": "A Node.js server that serves geocoded geocoded data derived from tweets retrieved from the Twitter streaming API to multiple clients over web sockets.",
+  "description": "A Node.js application that serves geocoded data derived from tweets retrieved from the Twitter streaming API to multiple clients over web sockets.",
   "license": "MIT",
   "repository": {
     "type": "git",
