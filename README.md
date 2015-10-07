@@ -63,11 +63,11 @@ This will run the server on port 5000 and return geocoded data from anywhere in 
 
 `-p` `--port`
 
-<p style="margin-left: 1.5em">Specifies the port on which the server will run. The default is 5000.</p>
+Specifies the port on which the server will run. The default is 5000.
 
 `-b` `--boundingbox`
 
-<p style="margin-left: 1.5em">Specifies the bounding box around the geographical area from which geocoded data will be returned. This value is a string that contains a pair of longitude and latitude pairs, with the southwest corner of the bounding box coming first, as described in the Twitter API documentation for the  [locations streaming API parameter](https://dev.twitter.com/streaming/overview/request-parameters#locations "Learn more about the locations parameter of the streaming API at Twitter"). The default is ["-180,-90,180,90"](https://gist.github.com/UsabilityEtc/5f67d031c4e61a11843a "View the world bounding box on a map"), which encloses the world.</p>
+Specifies the bounding box around the geographical area from which geocoded data will be returned. This value is a string that contains a pair of longitude and latitude pairs, with the southwest corner of the bounding box coming first, as described in the Twitter API documentation for the  [locations streaming API parameter](https://dev.twitter.com/streaming/overview/request-parameters#locations "Learn more about the locations parameter of the streaming API at Twitter"). The default is ["-180,-90,180,90"](https://gist.github.com/UsabilityEtc/5f67d031c4e61a11843a "View the world bounding box on a map"), which encloses the world.
 
 For example, the following command starts the Twitter Geo Server on port 5025 and limits the geocoded data with a custom [bounding box around the UK](https://gist.github.com/UsabilityEtc/6d2059bd4f0181a98d76 "View the UK bounding box on a map"):
 
