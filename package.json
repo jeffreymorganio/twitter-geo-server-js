@@ -1,0 +1,35 @@
+{
+  "name": "twitter-geo-server-js",
+  "version": "1.0.0",
+  "description": "A Node.js server that serves geocoded geocoded data derived from tweets retrieved from the Twitter streaming API to multiple clients over web sockets.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UsabilityEtc/twitter-geo-server-js.git"
+  },
+  "author": {
+    "name": "Jeffrey Morgan",
+    "email": "usabilityetc@gmail.com",
+    "url": "http://usabilityetc.com"
+  },
+  "keywords": [
+    "twitter",
+    "geocoded",
+    "tweets",
+    "server"
+  ],
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "express": "^4.4.5",
+    "minimist": "^1.2.0",
+    "minimist-options": "^1.0.0",
+    "tweet-utils-js": "^1.2.0",
+    "twitter": "^1.2.5",
+    "ws": "0.4.x"
+  }
+}
