@@ -4,7 +4,7 @@ The **Twitter Geo Server** is a Node.js application that serves geocoded data de
 
 The default setting returns geocoded data from anywhere in the world. To receive geocoded data from a specific geographic area, you can supply a longitude and latitude bounding box as a command-line parameter.
 
-This server was developed to drive the [D3 Twitter Geo Stream](https://github.com/UsabilityEtc/d3-twitter-geo-stream) visualization, but it also provides a source of naturally-occuring geocoded data that is useful for a variety of applications.
+This server was developed to drive the [D3 Twitter Geo Stream](https://github.com/jeffreymorganio/d3-twitter-geo-stream) visualization, but it also provides a source of naturally-occuring geocoded data that is useful for a variety of applications.
 
 ## Geocoded JSON Data
 
@@ -67,9 +67,9 @@ Specifies the port on which the server will run. The default is 5000.
 
 `-b` `--boundingbox`
 
-Specifies the bounding box around the geographical area from which geocoded data will be returned. This value is a string that contains a pair of longitude and latitude pairs, with the southwest corner of the bounding box coming first, as described in the Twitter API documentation for the  [locations streaming API parameter](https://dev.twitter.com/streaming/overview/request-parameters#locations "Learn more about the locations parameter of the streaming API at Twitter"). The default is ["-180,-90,180,90"](https://gist.github.com/UsabilityEtc/5f67d031c4e61a11843a "View the world bounding box on a map"), which encloses the world.
+Specifies the bounding box around the geographical area from which geocoded data will be returned. This value is a string that contains a pair of longitude and latitude pairs, with the southwest corner of the bounding box coming first, as described in the Twitter API documentation for the  [locations streaming API parameter](https://dev.twitter.com/streaming/overview/request-parameters#locations "Learn more about the locations parameter of the streaming API at Twitter"). The default is ["-180,-90,180,90"](https://gist.github.com/jeffreymorganio/5f67d031c4e61a11843a "View the world bounding box on a map"), which encloses the world.
 
-For example, the following command starts the Twitter Geo Server on port 5025 and limits the geocoded data with a custom [bounding box around the UK](https://gist.github.com/UsabilityEtc/6d2059bd4f0181a98d76 "View the UK bounding box on a map"):
+For example, the following command starts the Twitter Geo Server on port 5025 and limits the geocoded data with a custom [bounding box around the UK](https://gist.github.com/jeffreymorganio/6d2059bd4f0181a98d76 "View the UK bounding box on a map"):
 
 ```
 node server.js -p=5025 --boundingbox="-10.8544921875,49.92293545449574,2.021484375,58.77959115030064"
@@ -87,7 +87,7 @@ webSocket.onmessage = function(event) {
 };
 ```
 
-The [D3 Twitter Geo Stream](https://github.com/UsabilityEtc/d3-twitter-geo-stream) is an example client that connects to the Twitter Geo Server and visualizes the geocoded data with a D3 map and a D3 bar chart.
+The [D3 Twitter Geo Stream](https://github.com/jeffreymorganio/d3-twitter-geo-stream) is an example client that connects to the Twitter Geo Server and visualizes the geocoded data with a D3 map and a D3 bar chart.
 
 ## Custom Bounding Boxes
 
@@ -103,7 +103,7 @@ To limit the geocoded tweets returned by the server to the UK, for example, use 
 "-10.8544921875,49.92293545449574,2.021484375,58.77959115030064"
 ```
 
-Note that enclosing a geographic area with a bounding box might include geocoded data from neighboring areas. For example, the [UK bounding box](https://gist.github.com/UsabilityEtc/6d2059bd4f0181a98d76 "View the UK bounding box on a map") shown above will also include geocoded data derived from tweets authored in Ireland and a small region of France.
+Note that enclosing a geographic area with a bounding box might include geocoded data from neighboring areas. For example, the [UK bounding box](https://gist.github.com/jeffreymorganio/6d2059bd4f0181a98d76 "View the UK bounding box on a map") shown above will also include geocoded data derived from tweets authored in Ireland and a small region of France.
 
 To filter out geocoded data at the country level, examine the value of the `countryCode` key of each geocoded datum after it is returned by the server. For example, here's the JavaScript to exclude all tweets not authored in the UK:
 
