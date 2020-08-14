@@ -30,6 +30,6 @@
     "minimist-options": "^1.0.0",
     "tweet-utils-js": "^1.2.0",
     "twitter": "^1.2.5",
-    "ws": "0.4.x"
+    "ws": "7.3.x"
   }
 }
